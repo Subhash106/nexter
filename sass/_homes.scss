@@ -1,4 +1,77 @@
 .homes {
-  background-color: gold;
+  margin: 8rem 0;
   grid-column: col-start 1 / col-end 8;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.15);
+
+  &__heart {
+    fill: $color-primary;
+    width: 2rem;
+    height: 2rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: end;
+    padding: 1rem;
+    z-index: 1;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: $color-primary;
+  }
+
+  &__location {
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: $font-display;
+  }
+
+  &__btn {
+    grid-column: 1/-1;
+  }
+
+  &__image {
+    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+
+  &__title {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    align-self: end;
+    justify-self: center;
+    background-color: $color-secondary;
+    padding: 0.5rem 0;
+    text-align: center;
+    width: 90%;
+    transform: translateY(2.1rem);
+  }
+
+  &__amenities {
+    padding: 6rem 2rem 4rem 2rem;
+    background-color: $color-grey-light-1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    grid-column: 1/-1;
+  }
+
+  &__amenity {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
 }
