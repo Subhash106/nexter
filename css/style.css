@@ -102,8 +102,35 @@ body {
     margin-top: 2rem; }
 
 .header {
-  background-color: red;
-  grid-column: full-start/ col-end 6; }
+  padding: 2rem 6rem;
+  grid-column: full-start/ col-end 6;
+  background-image: linear-gradient(to right, rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .header__logo {
+    height: 3rem;
+    align-self: center; }
+    .header__logo__seen-on {
+      height: 2rem; }
+  .header__logos {
+    display: flex;
+    justify-content: space-between; }
+
+.seen__on {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  white-space: nowrap;
+  margin-bottom: 1rem; }
+  .seen__on::before, .seen__on::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #fff; }
 
 .realtors {
   background-color: gray;
