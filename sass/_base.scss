@@ -14,6 +14,11 @@ $color-grey-dark-2: #6d5d4b;
 $font-primary: "Nunito", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
 
+//responsive breakpoints
+$bp-largest: 54em;
+$bp-small: 47.5em;
+$bp-smallest: 37.5em;
+
 *,
 *::after,
 *::before {
@@ -50,4 +55,18 @@ body {
       [col-start] minmax(min-content, 14rem) [col-end]
     )
     minmax(6rem, 1fr) [full-end];
+
+  @media only screen and (max-width: $bp-largest) {
+    grid-template-rows: 6rem 80vh repeat(5, min-content);
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr) repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      minmax(6rem, 1fr) [full-end];
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-rows: 6rem 60vh repeat(5, min-content);
+  }
 }
